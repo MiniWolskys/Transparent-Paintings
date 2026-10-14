@@ -1,0 +1,26 @@
+{
+	"schemaVersion": 1,
+	"id": "transparentpaintings",
+	"version": "${version}",
+	"name": "Transparent Paintings",
+	"description": "Lets resource packs give paintings transparent and semi-transparent pixels. Client-side only, works on any server.",
+	"authors": [
+		"miniwolskys"
+	],
+	"contact": {
+		"homepage": "https://github.com/MiniWolskys/Transparent-Paintings",
+		"sources": "https://github.com/MiniWolskys/Transparent-Paintings",
+		"issues": "https://github.com/MiniWolskys/Transparent-Paintings/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/transparentpaintings/icon.png",
+	"environment": "client",
+	"mixins": [
+		"transparentpaintings.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25"
+	}
+}

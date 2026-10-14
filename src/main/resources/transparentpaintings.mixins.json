@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "io.github.miniwolskys.transparentpaintings.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"PaintingRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
