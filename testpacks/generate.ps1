@@ -109,6 +109,16 @@ $ids += New-Painting 'ghost' 1 2 'Ghost' {
 	return 0, 0, 0, 0
 }
 
+# 2x2: tests partial edges. Opaque L along the left and bottom (edges drawn), fully transparent
+# elsewhere, except a 70% strip on the right (edge drawn) and a 30% strip on the top (no edge).
+$ids += New-Painting 'edges' 2 2 'Edge Test' {
+	param($x, $y, $w, $h)
+	if ($x -lt $w / 3 -or $y -ge $h * 2 / 3) { return 255, 30, 110, 60 }
+	if ($x -ge $w - 6) { return 178, 230, 120, 30 }
+	if ($y -lt 6) { return 77, 40, 120, 230 }
+	return 0, 0, 0, 0
+}
+
 # 1x1: fully opaque checkerboard. Control: must look exactly like a vanilla painting.
 $ids += New-Painting 'opaque' 1 1 'Opaque Control' {
 	param($x, $y, $w, $h)
